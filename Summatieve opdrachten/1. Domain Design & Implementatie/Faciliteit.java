@@ -15,6 +15,6 @@ public class Faciliteit {
 
     @Override
     public String toString() {
-        return "\n" + type + "; " + naam;
+        return "\n   " + type + "; " + naam;
     }
 }
