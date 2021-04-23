@@ -81,7 +81,32 @@ Klant
 2.	Een klant hoort altijd bij nul of één huis
 
 ## Methoden
+Land
+* Land(n : String)
+* setPark(p : Park) : void
+* toString() : String
+
+Park
+* Park(n : String, pl : String, pr : String, b : double)
+* setFaciliteit(f : Faciliteit) : void
+* setHuis(h : Huis) : void
+* toString() : String
+
+Faciliteit
+* Faciliteit(t : String, n : String)
+* toString() : String
+
+Huis
+* Huis(t : String, pPN : int, o : int, aS : int, aV : int, ve : boolean, w : boolean, va : boolean, k : boolean, aG : int, aB : int, f : boolean, s : boolean, z : boolean)
+* setHuurder(h : Klant) : void
+* getHuurder() : String
+* toString() : String
+
+Klant
+* Klant(n : String, s : String, h : int, p : String, w : String, gb : String, t : String, e : String, gs : char, kP : double)
+* getKorting() : double
+* toString() : String
 
 
 ## UML klassendiagram
-![image](https://user-images.githubusercontent.com/74547189/115884090-ce458900-a44e-11eb-8498-215a61fc0d20.png)
+![image](https://user-images.githubusercontent.com/74547189/115900079-d2c66d80-a45f-11eb-80e7-82aa3a4e67a8.png)
