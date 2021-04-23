@@ -19,11 +19,6 @@ public class Park {
 
     @Override
     public String toString() {
-        return "Park{" +
-                "naam='" + naam + '\'' +
-                ", plaats='" + plaats + '\'' +
-                ", provincie='" + provincie + '\'' +
-                ", beoordeling=" + beoordeling +
-                '}';
+        return naam + " (" + beoordeling + ")\n   " + plaats + ", " + provincie;
     }
 }
