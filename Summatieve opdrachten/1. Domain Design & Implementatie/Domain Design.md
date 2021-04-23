@@ -59,7 +59,7 @@ Klant
 *	geboortedatum : String
 *	telefoonnummer : int
 *	e-mailadres: String
-*	geslacht : String
+*	geslacht : char
 *	kortingsPercentage : double
 
  
