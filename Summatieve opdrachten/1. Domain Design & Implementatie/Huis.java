@@ -16,6 +16,7 @@ public class Huis {
     private boolean föhn;
     private boolean sauna;
     private boolean zonnebank;
+    private Klant huurder;
 
     public Huis() {
     }
@@ -35,6 +36,10 @@ public class Huis {
         this.föhn = föhn;
         this.sauna = sauna;
         this.zonnebank = zonnebank;
+    }
+
+    public void setHuurder(Klant huurder) {
+        this.huurder = huurder;
     }
 
     @Override
