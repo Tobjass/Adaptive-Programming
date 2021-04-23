@@ -5,9 +5,6 @@ public class Land {
     private String naam;
     private Park park;
 
-    public Land() {
-    }
-
     public Land(String naam) {
         this.naam = naam;
     }
