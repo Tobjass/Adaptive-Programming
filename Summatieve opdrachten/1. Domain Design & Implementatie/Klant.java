@@ -13,9 +13,6 @@ public class Klant {
     private String manOfVrouw;
     private double kortingsPercentage;
 
-    public Klant() {
-    }
-
     public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, String manOfVrouw, double kortingsPercentage) {
         this.naam = naam;
         this.straat = straat;
