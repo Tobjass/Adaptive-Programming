@@ -12,9 +12,6 @@ public class Park {
     private List<Faciliteit> faciliteiten = new ArrayList<>();
     private List<Huis> huizen = new ArrayList<>();
 
-    public Park() {
-    }
-
     public Park(String naam, String plaats, String provincie, double beoordeling) {
         this.naam = naam;
         this.plaats = plaats;
