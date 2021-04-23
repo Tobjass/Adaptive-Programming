@@ -14,6 +14,9 @@ public class Main {
         Faciliteit f3 = new Faciliteit("Fietsverhuur", "Bikes & More");
         park.setFaciliteit(f3);
 
+        Huis h1 = new Huis("10-persoons bungalow 10L", 319.67, 148, 5, 2, true, true, true, true, 5, 3, true, true, false);
+        park.setHuis(h1);
+
         System.out.println(land);
     }
 }
