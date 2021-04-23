@@ -10,6 +10,7 @@ public class Park {
     private String provincie;
     private double beoordeling;
     private List<Faciliteit> faciliteiten = new ArrayList<>();
+    private List<Huis> huizen = new ArrayList<>();
 
     public Park() {
     }
@@ -25,8 +26,13 @@ public class Park {
         this.faciliteiten.add(faciliteit);
     }
 
+    public void setHuis(Huis huis) {
+        this.huizen.add(huis);
+    }
+
     @Override
     public String toString() {
-        return naam + " (" + beoordeling + ")\n   " + plaats + ", " + provincie + "\n\nFaciliteiten: " + faciliteiten;
+        return naam + " (" + beoordeling + ")\n   " + plaats + ", " + provincie + "\n\nFaciliteiten: " + faciliteiten
+                + "\n\nHuizen: " + huizen;
     }
 }
