@@ -14,8 +14,12 @@ public class Main {
         Faciliteit f3 = new Faciliteit("Fietsverhuur", "Bikes & More");
         park.setFaciliteit(f3);
 
-        Huis h1 = new Huis("10-persoons bungalow 10L", 319.67, 148, 5, 2, true, true, true, true, 5, 3, true, true, false);
+        Huis h1 = new Huis("8-persoons bungalow 8L", 236.33, 122, 4, 2, true, true, true, true, 5, 2, true, true, false);
         park.setHuis(h1);
+        Huis h2 = new Huis("10-persoons bungalow 10L", 319.67, 148, 5, 2, true, true, true, true, 5, 3, true, true, false);
+        park.setHuis(h2);
+        Huis h3 = new Huis("16-persoons bungalow 16C", 247.25, 220, 8, 2, true, true, true, true, 8, 4, true, false, false);
+        park.setHuis(h3);
 
         System.out.println(land);
     }
