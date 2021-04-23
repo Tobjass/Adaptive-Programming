@@ -28,7 +28,7 @@ Park
 * naam : String
 * plaats : String
 *	provincie : String
-*	beoordeling : float
+*	beoordeling : double
 
 Faciliteit
 *	type : String
@@ -36,7 +36,7 @@ Faciliteit
 
 Huis
 *	type : String
-*	prijsPerDag : double
+*	prijsPerNacht : double
 *	oppervlakte : int
 *	aantalSlaapkamers : int
 *	aantalVerdiepingen : int
