@@ -53,6 +53,8 @@ public class Huis {
         String föhn = (this.föhn) ? "Föhn\n\t  " : "Geen föhn\n\t  ";
         String sauna = (this.sauna) ? "Sauna\n\t  " : "Geen sauna\n\t  ";
         String zonnebank = (this.zonnebank) ? "Zonnebank" : "Geen zonnebank";
+        // Regel 49 t/m 55 checkt of verwarming, wifi ... etc. true of false is. Als het false is komt er een string met
+        // "Geen" ervoor uit. Als het true is komt het woord waar naar gekeken wordt als string er uit.
         return "\n   " + type + "\n\t  €" + prijsPerNacht + " per nacht\n\t  Circa " + oppervlakte + " m²\n\t  "
                 + aantalSlaapkamers + " slaapkamers\n\t  " + aantalVerdiepingen + " verdiepingen\n\t  " + verwarming
                 + wifi + vaatwasser + koffiemachine + aantalGaspitten + "-pits)\n\t  " + aantalBadkamers
