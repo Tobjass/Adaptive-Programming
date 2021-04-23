@@ -4,6 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         Land l1 = new Land("Nederland");
-        System.out.println(l1 + ":");
+        Park p1 = new Park("Landal De Vers", "Overloon", "Brabant", 8.4);
+        l1.setPark(p1);
+
+        System.out.println(l1);
     }
 }
