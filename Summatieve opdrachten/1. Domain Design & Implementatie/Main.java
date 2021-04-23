@@ -21,6 +21,13 @@ public class Main {
         Huis h3 = new Huis("16-persoons bungalow 16C", 247.25, 220, 8, 2, true, true, true, true, 8, 4, true, false, false);
         park.setHuis(h3);
 
+        Klant k1 = new Klant("Tobias Kramer", "Achtersloot", 87, "5601 ES", "IJsselstein", "25/06/2002", "0678931803", "tobias35@gmail.com", "M", 10.0);
+        h2.setHuurder(k1);
+        Klant k2 = new Klant("Jeroen Visser", "Bombardonlaan", 56, "2783 PT", "Nieuwegein", "14/03/2002", "0632619375", "jeroen89@gmail.com", "M", 5.0);
+        h1.setHuurder(k2);
+        Klant k3 = new Klant("Bart van Zandwijk", "Nolensstraat", 9, "9652 AN", "Nieuwegein", "09/11/2002", "0684617593", "bartvz@gmail.com", "M", 15);
+        h3.setHuurder(k3);
+
         System.out.println(land);
     }
 }
