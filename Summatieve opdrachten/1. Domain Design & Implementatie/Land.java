@@ -10,4 +10,9 @@ public class Land {
     public Land(String naam) {
         this.naam = naam;
     }
+
+    @Override
+    public String toString() {
+        return naam;
+    }
 }
