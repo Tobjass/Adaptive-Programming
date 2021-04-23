@@ -56,7 +56,7 @@ Klant
 *	huisnummer : int
 *	postcode : String
 *	woonplaats : String
-*	geboortedatum : date
+*	geboortedatum : String
 *	telefoonnummer : int
 *	e-mailadres: String
 *	manOfVrouw : String
@@ -84,4 +84,4 @@ Klant
 
 
 ## UML klassendiagram
-![image](https://user-images.githubusercontent.com/74547189/115866571-245c0180-a43a-11eb-8605-3541afb32888.png)
+![image](https://user-images.githubusercontent.com/74547189/115869734-99c9d100-a43e-11eb-9eab-00210ace1464.png)
