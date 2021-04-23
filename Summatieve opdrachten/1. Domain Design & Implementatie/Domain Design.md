@@ -84,4 +84,4 @@ Klant
 
 
 ## UML klassendiagram
-![image](https://user-images.githubusercontent.com/74547189/115883951-a7875280-a44e-11eb-92c0-cf4779229218.png)
+![image](https://user-images.githubusercontent.com/74547189/115884090-ce458900-a44e-11eb-8498-215a61fc0d20.png)
