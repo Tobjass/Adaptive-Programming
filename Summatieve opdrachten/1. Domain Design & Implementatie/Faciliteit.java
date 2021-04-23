@@ -12,4 +12,9 @@ public class Faciliteit {
         this.type = type;
         this.naam = naam;
     }
+
+    @Override
+    public String toString() {
+        return "\n" + type + "; " + naam;
+    }
 }
