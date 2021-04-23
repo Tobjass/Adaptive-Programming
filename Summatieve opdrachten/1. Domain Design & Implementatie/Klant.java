@@ -28,4 +28,13 @@ public class Klant {
         this.manOfVrouw = manOfVrouw;
         this.kortingsPercentage = kortingsPercentage;
     }
+
+    public double getKorting() {
+        return kortingsPercentage;
+    }
+
+    @Override
+    public String toString() {
+        return naam;
+    }
 }
