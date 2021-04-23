@@ -1,4 +1,5 @@
 # Domain Design
+
 ## Inhoud
 * [Tekstueel](#Tekstueel)
 * [Domeinklassen](#Domeinklassen)
@@ -9,6 +10,7 @@
 
 ## Tekstueel
 “De applicatie moet voor Nederland overzicht geven van de faciliteiten en huizen van een park, en welke klant welk huis gehuurd heeft.
+
 
 ## Domeinklassen
 *	Land
