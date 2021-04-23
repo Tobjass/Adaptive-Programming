@@ -36,7 +36,7 @@ Faciliteit
 
 Huis
 *	type : String
-*	prijsPerNacht : double
+*	prijsPerNacht : int
 *	oppervlakte : int
 *	aantalSlaapkamers : int
 *	aantalVerdiepingen : int
