@@ -16,7 +16,7 @@ public class Huis {
     private boolean föhn;
     private boolean sauna;
     private boolean zonnebank;
-    
+
     public Huis() {
     }
 
@@ -35,5 +35,25 @@ public class Huis {
         this.föhn = föhn;
         this.sauna = sauna;
         this.zonnebank = zonnebank;
+    }
+
+    @Override
+    public String toString() {
+        return "Huis{" +
+                "type='" + type + '\'' +
+                ", prijsPerDag=" + prijsPerDag +
+                ", oppervlakte=" + oppervlakte +
+                ", aantalSlaapkamers=" + aantalSlaapkamers +
+                ", aantalVerdiepingen=" + aantalVerdiepingen +
+                ", verwarming=" + verwarming +
+                ", wifi=" + wifi +
+                ", vaatwasser=" + vaatwasser +
+                ", koffiemachine=" + koffiemachine +
+                ", aantalGaspitten=" + aantalGaspitten +
+                ", aantalBadkamers=" + aantalBadkamers +
+                ", föhn=" + föhn +
+                ", sauna=" + sauna +
+                ", zonnebank=" + zonnebank +
+                '}';
     }
 }
