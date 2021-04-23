@@ -1,5 +1,7 @@
 package com.tobias.summatieveopdracht1;
 
+import java.util.Objects;
+
 public class Huis {
 
     private String type;
@@ -39,21 +41,16 @@ public class Huis {
 
     @Override
     public String toString() {
-        return "Huis{" +
-                "type='" + type + '\'' +
-                ", prijsPerDag=" + prijsPerDag +
-                ", oppervlakte=" + oppervlakte +
-                ", aantalSlaapkamers=" + aantalSlaapkamers +
-                ", aantalVerdiepingen=" + aantalVerdiepingen +
-                ", verwarming=" + verwarming +
-                ", wifi=" + wifi +
-                ", vaatwasser=" + vaatwasser +
-                ", koffiemachine=" + koffiemachine +
-                ", aantalGaspitten=" + aantalGaspitten +
-                ", aantalBadkamers=" + aantalBadkamers +
-                ", föhn=" + föhn +
-                ", sauna=" + sauna +
-                ", zonnebank=" + zonnebank +
-                '}';
+        String verwarming = (this.verwarming) ? "Verwarming\n\t  " : "Geen verwarming\n\t  ";
+        String wifi = (this.wifi) ? "Wifi\n\t  " : "Geen wifi\n\t  ";
+        String vaatwasser = (this.vaatwasser) ? "Vaatwasser\n\t  " : "Geen vaatwasser\n\t  ";
+        String koffiemachine = (this.koffiemachine) ? "Koffiemachine\n\t  Gasplaat (" : "Geen koffiemachine\n\t  Gasplaat (";
+        String föhn = (this.föhn) ? "Föhn\n\t  " : "Geen föhn\n\t  ";
+        String sauna = (this.sauna) ? "Sauna\n\t  " : "Geen sauna\n\t  ";
+        String zonnebank = (this.zonnebank) ? "Zonnebank" : "Geen zonnebank";
+        return "\n   " + type + "\n\t  €" + prijsPerDag + " per dag\n\t  Circa " + oppervlakte + " m²\n\t  "
+                + aantalSlaapkamers + " slaapkamers\n\t  " + aantalVerdiepingen + " verdiepingen\n\t  " + verwarming
+                + wifi + vaatwasser + koffiemachine + aantalGaspitten + "-pits)\n\t  " + aantalBadkamers
+                + " badkamer(s)\n\t  " + föhn + sauna + zonnebank;
     }
 }
