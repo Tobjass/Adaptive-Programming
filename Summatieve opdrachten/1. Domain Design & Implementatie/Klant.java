@@ -10,10 +10,10 @@ public class Klant {
     private String geboortedatum;
     private String telefoonnummer;
     private String emailadres;
-    private String geslacht;
+    private char geslacht;
     private double kortingsPercentage;
 
-    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, String geslacht, double kortingsPercentage) {
+    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, char geslacht, double kortingsPercentage) {
         this.naam = naam;
         this.straat = straat;
         this.huisnummer = huisnummer;
