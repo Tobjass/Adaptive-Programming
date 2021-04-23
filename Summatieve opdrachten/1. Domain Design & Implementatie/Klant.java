@@ -10,10 +10,10 @@ public class Klant {
     private String geboortedatum;
     private String telefoonnummer;
     private String emailadres;
-    private String manOfVrouw;
+    private String geslacht;
     private double kortingsPercentage;
 
-    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, String manOfVrouw, double kortingsPercentage) {
+    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, String geslacht, double kortingsPercentage) {
         this.naam = naam;
         this.straat = straat;
         this.huisnummer = huisnummer;
@@ -22,7 +22,7 @@ public class Klant {
         this.geboortedatum = geboortedatum;
         this.telefoonnummer = telefoonnummer;
         this.emailadres = emailadres;
-        this.manOfVrouw = manOfVrouw;
+        this.geslacht = geslacht;
         this.kortingsPercentage = kortingsPercentage;
     }
 
