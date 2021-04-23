@@ -8,7 +8,7 @@ public class Klant {
     private String postcode;
     private String woonplaats;
     private String geboortedatum;
-    private int telefoonnummer;
+    private String telefoonnummer;
     private String emailadres;
     private String manOfVrouw;
     private double kortingsPercentage;
@@ -16,7 +16,7 @@ public class Klant {
     public Klant() {
     }
 
-    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, int telefoonnummer, String emailadres, String manOfVrouw, double kortingsPercentage) {
+    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, String manOfVrouw, double kortingsPercentage) {
         this.naam = naam;
         this.straat = straat;
         this.huisnummer = huisnummer;
