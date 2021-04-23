@@ -18,9 +18,6 @@ public class Huis {
     private boolean zonnebank;
     private Klant huurder;
 
-    public Huis() {
-    }
-
     public Huis(String type, int prijsPerNacht, int oppervlakte, int aantalSlaapkamers, int aantalVerdiepingen, boolean verwarming, boolean wifi, boolean vaatwasser, boolean koffiemachine, int aantalGaspitten, int aantalBadkamers, boolean föhn, boolean sauna, boolean zonnebank) {
         this.type = type;
         this.prijsPerNacht = prijsPerNacht;
