@@ -1,4 +1,4 @@
-package com.tobias.summatieveopdracht1;
+package tobias.summatieveopdracht1;
 
 public class Huis {
 
@@ -16,7 +16,6 @@ public class Huis {
     private boolean föhn;
     private boolean sauna;
     private boolean zonnebank;
-    private Klant huurder;
 
     public Huis(String type, int prijsPerNacht, int oppervlakte, int aantalSlaapkamers, int aantalVerdiepingen, boolean verwarming, boolean wifi, boolean vaatwasser, boolean koffiemachine, int aantalGaspitten, int aantalBadkamers, boolean föhn, boolean sauna, boolean zonnebank) {
         this.type = type;
@@ -35,13 +34,8 @@ public class Huis {
         this.zonnebank = zonnebank;
     }
 
-    public void setHuurder(Klant huurder) {
-        this.huurder = huurder;
-    }
-
-    public String getHuurder() {
-        return "\n" + huurder + " huurt:\n   " + type + "\n   voor 3 nachten, en dat kost: €"
-                + prijsPerNacht * 3 * (1 - huurder.getKorting() / 100) + " (" + huurder.getKorting() + "% korting)";
+    public String getType() {
+        return type;
     }
 
     @Override
