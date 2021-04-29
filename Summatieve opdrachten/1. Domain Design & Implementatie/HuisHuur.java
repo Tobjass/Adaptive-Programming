@@ -33,11 +33,17 @@ public class HuisHuur {
         }
         return 0;
     }
-    
+
+    private String huisCheck() {
+       if (gehuurdeHuis != null) {
+           return gehuurdeHuis.getType() + " met prijs per nacht: " + gehuurdeHuis.getPrijsPerNacht();
+       }
+       return "er is geen huis bekend";
+    }
+
     @Override
     public String toString() {
-        return Objects.requireNonNullElse(gehuurdeHuis.getType(), "\n\ter is geen huis bekend") + "\n\t"
-                + Objects.requireNonNullElse(huurder, "er is geen huurder bekend") + "\n\taantal dagen: "
+        return huisCheck() + "\n   " + Objects.requireNonNullElse(huurder, "er is geen huurder bekend") + "\n   aantal dagen: "
                 + aantalDagen + " en dat kost " + berekenPrijs();
     }
 }
