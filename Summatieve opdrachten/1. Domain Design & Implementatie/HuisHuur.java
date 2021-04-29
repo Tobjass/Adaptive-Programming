@@ -21,7 +21,7 @@ public class HuisHuur {
         this.gehuurdeHuis = gehuurdeHuis;
     }
 
-    public Huis getGehuurdeHuis() {
-        return gehuurdeHuis;
+    public String getGehuurdeHuis() {
+        return gehuurdeHuis.getType();
     }
 }
