@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class HuisHuur {
 
-    private int aantalDagen;
+    private int aantalNachten;
     private Klant huurder;
     private Huis gehuurdeHuis;
 
     public HuisHuur() {
     }
 
-    public void setAantalDagen(int aantalDagen) {
-        this.aantalDagen = aantalDagen;
+    public void setAantalNachten(int aantalNachten) {
+        this.aantalNachten = aantalNachten;
     }
 
     public void setHuurder(Klant huurder) {
@@ -29,7 +29,7 @@ public class HuisHuur {
 
     private double berekenPrijs() {
         if (gehuurdeHuis != null && huurder != null) {
-            return aantalDagen * gehuurdeHuis.getPrijsPerNacht() * (1 - huurder.getKorting() / 100);
+            return aantalNachten * gehuurdeHuis.getPrijsPerNacht() * (1 - huurder.getKorting() / 100);
         }
         return 0;
     }
@@ -41,9 +41,16 @@ public class HuisHuur {
        return "er is geen huis bekend";
     }
 
+    private String klantCheck() {
+        if (huurder != null) {
+            return huurder.toString();
+        }
+        return "er is geen huurder bekend";
+    }
+
     @Override
     public String toString() {
-        return huisCheck() + "\n   " + Objects.requireNonNullElse(huurder, "er is geen huurder bekend") + "\n   aantal dagen: "
-                + aantalDagen + " en dat kost " + berekenPrijs();
+        return huisCheck() + "\n   " + klantCheck() + "\n   aantal nachten: " + aantalNachten + " en dat kost "
+                + berekenPrijs();
     }
 }
