@@ -1,4 +1,4 @@
-package com.tobias.summatieveopdracht1;
+package tobias.summatieveopdracht1;
 
 public class Main {
 
@@ -21,16 +21,27 @@ public class Main {
         Huis h3 = new Huis("16-persoons bungalow 16C", 250, 220, 8, 2, true, true, true, true, 8, 4, true, false, false);
         park.setHuis(h3);
 
+        HuisHuur hh1 = new HuisHuur();
         Klant k1 = new Klant("Tobias Kramer", "Achtersloot", 87, "5601 ES", "IJsselstein", "25/06/2002", "0678931803", "tobias35@gmail.com", 'M', 10);
-        h2.setHuurder(k1);
+        hh1.setHuurder(k1);
+        hh1.setAantalNachten(4);
+        hh1.setGehuurdeHuis(h1);
+
         Klant k2 = new Klant("Jeroen Visser", "Bombardonlaan", 56, "2783 PT", "Nieuwegein", "14/03/2002", "0632619375", "jeroen89@gmail.com", 'M', 15);
-        h1.setHuurder(k2);
+        HuisHuur hh2 = new HuisHuur();
+        hh2.setHuurder(k2);
+        hh2.setAantalNachten(3);
+        hh2.setGehuurdeHuis(h2);
+
         Klant k3 = new Klant("Bart van Zandwijk", "Nolensstraat", 9, "9652 AN", "Nieuwegein", "09/11/2002", "0684617593", "bartvz@gmail.com", 'M', 5);
-        h3.setHuurder(k3);
+        HuisHuur hh3 = new HuisHuur();
+        hh3.setHuurder(k3);
+        hh3.setAantalNachten(5);
+        hh3.setGehuurdeHuis(h3);
 
         System.out.println(land);
-        System.out.println(h1.getHuurder());
-        System.out.println(h2.getHuurder());
-        System.out.println(h3.getHuurder());
+        System.out.println("\nEerste huishuur:\n   " + hh1);
+        System.out.println("\nTweede huishuur:\n   " + hh2);
+        System.out.println("\nDerde huishuur:\n   " + hh3);
     }
 }
