@@ -20,4 +20,8 @@ public class HuisHuur {
     public void setGehuurdeHuis(Huis gehuurdeHuis) {
         this.gehuurdeHuis = gehuurdeHuis;
     }
+
+    public Huis getGehuurdeHuis() {
+        return gehuurdeHuis;
+    }
 }
