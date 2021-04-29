@@ -38,20 +38,25 @@ public class Huis {
         return type;
     }
 
+    public int getPrijsPerNacht() {
+        return prijsPerNacht;
+    }
+
+    public String booleanCheck(boolean waarde, String woord) {
+        if (waarde) {
+            return woord.substring(0, 1).toUpperCase() + woord.substring(1);
+        }
+        return "Geen " + woord;
+    }
+
     @Override
     public String toString() {
-        String verwarming = (this.verwarming) ? "Verwarming\n\t  " : "Geen verwarming\n\t  ";
-        String wifi = (this.wifi) ? "Wifi\n\t  " : "Geen wifi\n\t  ";
-        String vaatwasser = (this.vaatwasser) ? "Vaatwasser\n\t  " : "Geen vaatwasser\n\t  ";
-        String koffiemachine = (this.koffiemachine) ? "Koffiemachine\n\t  Gasplaat (" : "Geen koffiemachine\n\t  Gasplaat (";
-        String föhn = (this.föhn) ? "Föhn\n\t  " : "Geen föhn\n\t  ";
-        String sauna = (this.sauna) ? "Sauna\n\t  " : "Geen sauna\n\t  ";
-        String zonnebank = (this.zonnebank) ? "Zonnebank" : "Geen zonnebank";
-        // Regel 49 t/m 55 checkt of verwarming, wifi ... etc. true of false is. Als het false is komt er een string met
-        // "Geen" ervoor uit. Als het true is komt het woord waar naar gekeken wordt als string er uit.
         return "\n   " + type + "\n\t  €" + prijsPerNacht + " per nacht\n\t  Circa " + oppervlakte + " m²\n\t  "
-                + aantalSlaapkamers + " slaapkamers\n\t  " + aantalVerdiepingen + " verdiepingen\n\t  " + verwarming
-                + wifi + vaatwasser + koffiemachine + aantalGaspitten + "-pits)\n\t  " + aantalBadkamers
-                + " badkamer(s)\n\t  " + föhn + sauna + zonnebank;
+                + aantalSlaapkamers + " slaapkamers\n\t  " + aantalVerdiepingen + " verdiepingen\n\t  "
+                + booleanCheck(verwarming, "verwarming") + "\n\t  " + booleanCheck(wifi, "wifi") + "\n\t  "
+                + booleanCheck(vaatwasser, "vaatwasser") + "\n\t  "
+                + booleanCheck(koffiemachine, "koffiemachine") + "\n\t  Gasplaat (" + aantalGaspitten
+                + "-pits)\n\t  " + aantalBadkamers + " badkamer(s)\n\t  " + booleanCheck(föhn, "föhn") + "\n\t  "
+                + booleanCheck(sauna, "sauna") + "\n\t  " + booleanCheck(zonnebank, "zonnebank");
     }
 }
