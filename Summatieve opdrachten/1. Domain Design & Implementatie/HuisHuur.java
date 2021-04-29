@@ -23,10 +23,6 @@ public class HuisHuur {
         this.gehuurdeHuis = gehuurdeHuis;
     }
 
-    public String getGehuurdeHuis() {
-        return gehuurdeHuis.getType();
-    }
-
     private double berekenPrijs() {
         if (gehuurdeHuis != null && huurder != null) {
             return aantalNachten * gehuurdeHuis.getPrijsPerNacht() * (1 - huurder.getKorting() / 100);
