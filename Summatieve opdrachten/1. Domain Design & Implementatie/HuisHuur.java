@@ -8,4 +8,16 @@ public class HuisHuur {
 
     public HuisHuur() {
     }
+
+    public void setAantalDagen(int aantalDagen) {
+        this.aantalDagen = aantalDagen;
+    }
+
+    public void setHuurder(Klant huurder) {
+        this.huurder = huurder;
+    }
+
+    public void setGehuurdeHuis(Huis gehuurdeHuis) {
+        this.gehuurdeHuis = gehuurdeHuis;
+    }
 }
