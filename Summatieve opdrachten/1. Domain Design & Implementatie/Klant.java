@@ -1,4 +1,4 @@
-package com.tobias.summatieveopdracht1;
+package tobias.summatieveopdracht1;
 
 public class Klant {
 
@@ -10,10 +10,12 @@ public class Klant {
     private String geboortedatum;
     private String telefoonnummer;
     private String emailadres;
-    private char geslacht;
     private double kortingsPercentage;
 
-    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, char geslacht, double kortingsPercentage) {
+    public Klant() {
+    }
+
+    public Klant(String naam, String straat, int huisnummer, String postcode, String woonplaats, String geboortedatum, String telefoonnummer, String emailadres, double kortingsPercentage) {
         this.naam = naam;
         this.straat = straat;
         this.huisnummer = huisnummer;
@@ -22,8 +24,11 @@ public class Klant {
         this.geboortedatum = geboortedatum;
         this.telefoonnummer = telefoonnummer;
         this.emailadres = emailadres;
-        this.geslacht = geslacht;
         this.kortingsPercentage = kortingsPercentage;
+    }
+
+    public String getNaam() {
+        return naam;
     }
 
     public double getKorting() {
@@ -32,6 +37,6 @@ public class Klant {
 
     @Override
     public String toString() {
-        return naam;
+        return "Klant genaamd " + naam + " is een ";
     }
 }
