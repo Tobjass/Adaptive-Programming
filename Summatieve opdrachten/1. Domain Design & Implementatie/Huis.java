@@ -48,6 +48,8 @@ public class Huis {
         }
         return "Geen " + woord;
     }
+    // Controleert of de boolean true of false is. Als het true is wordt de eerste letter van het meegegeven woord
+    // omgezet naar een hoofdletter en returned. Als het false is wordt er geen voor het woord gezet en returned.
 
     @Override
     public String toString() {
