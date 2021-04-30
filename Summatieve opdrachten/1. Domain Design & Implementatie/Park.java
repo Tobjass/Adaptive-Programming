@@ -1,4 +1,4 @@
-package com.tobias.summatieveopdracht1;
+package tobias.summatieveopdracht1;
 
 import java.util.ArrayList;
 import java.util.List;
