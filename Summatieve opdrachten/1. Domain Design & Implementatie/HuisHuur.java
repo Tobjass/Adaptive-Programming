@@ -1,7 +1,5 @@
 package tobias.summatieveopdracht1;
 
-import java.util.Objects;
-
 public class HuisHuur {
 
     private int aantalNachten;
@@ -39,7 +37,7 @@ public class HuisHuur {
 
     private String klantCheck() {
         if (huurder != null) {
-            return huurder.toString();
+            return "op naam van: " + huurder.getNaam() + " (korting: " + huurder.getKorting() + "%)";
         }
         return "er is geen huurder bekend";
     }
