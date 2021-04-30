@@ -1,11 +1,11 @@
 package tobias.summatieveopdracht1;
 
-public class Volwassene extends Klant {
-    
+public class Volwassene extends Klant implements SoortKlant{
+
     private Klant volwassene;
 
-    public void setVolwassene(Klant volwassene) {
-        this.volwassene = volwassene;
+    public void setVariable(Klant variable) {
+        this.volwassene = variable;
     }
 
     @Override
