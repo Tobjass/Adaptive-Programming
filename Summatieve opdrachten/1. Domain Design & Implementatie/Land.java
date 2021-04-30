@@ -1,4 +1,4 @@
-package com.tobias.summatieveopdracht1;
+package tobias.summatieveopdracht1;
 
 public class Land {
 
