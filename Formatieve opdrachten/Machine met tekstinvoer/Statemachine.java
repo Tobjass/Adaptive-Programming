@@ -11,9 +11,11 @@ public class Statemachine {
 
         State.current = State.s0;
 
-        while (true) {
+        String[] letters = {"B", "A", "A", "B"};
+        for (String i : letters) {
             State.current.enter();
-            State.current.update();
+            String test = State.current.update(i);
+            System.out.println(test);
         }
     }
 }
