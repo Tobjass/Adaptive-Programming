@@ -8,6 +8,12 @@ public class Statemachine {
         State.s1 = new s1();
         State.s2 = new s2();
         State.s3 = new s3();
-        
+
+        State.current = State.s0;
+
+        while (true) {
+            State.current.enter();
+            State.current.update();
+        }
     }
 }
