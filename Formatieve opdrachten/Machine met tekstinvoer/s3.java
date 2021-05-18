@@ -2,22 +2,23 @@ package tobias.formatieveopdracht2a;
 
 public class s3 extends State {
 
-    void enter() {
-        System.out.println("Nu in de s3 state");
-    }
-
-    String update(String input) {
+    void update(String input) {
         switch (input) {
-
             case "A":
                 current = s3;
-                return "s3";
+                State.setLocaties(s3);
+                return;
             case "B":
                 current = s0;
-                return "s0";
+                State.setLocaties(s0);
+                return;
             default:
-                System.out.println("\n*** Error, overgang bestaat niet");
-                return "fout";
+                System.out.println("*** Error, overgang (s3 -> " + input + ") bestaat niet");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "s3";
     }
 }
