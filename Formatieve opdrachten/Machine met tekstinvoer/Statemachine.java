@@ -10,12 +10,13 @@ public class Statemachine {
         State.s3 = new s3();
 
         State.current = State.s0;
+        State.setLocaties(State.s0);
 
-        String[] letters = {"B", "A", "A", "B"};
-        for (String i : letters) {
-            State.current.enter();
-            String test = State.current.update(i);
-            System.out.println(test);
+        String[] letters = {"B", "A", "A", "B", "A"};
+        for (String x : letters) {
+            State.current.update(x);
         }
+
+        System.out.println(State.getLocaties());
     }
 }
