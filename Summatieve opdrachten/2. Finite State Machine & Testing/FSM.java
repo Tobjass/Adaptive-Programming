@@ -16,7 +16,9 @@ public class FSM {
         State current = beginstate;
         this.locaties.add(current.getNaam());
         for (String input : inputs) {
-            
+            current = current.getTransities().get(input);
+            this.locaties.add(current.getNaam());
         }
+        return this.locaties;
     }
 }
