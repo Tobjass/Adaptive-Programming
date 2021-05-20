@@ -1,21 +1,34 @@
 package tobias.formatieveopdracht2a;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class State {
 
-    static State s0, s1, s2, s3, current;
+    private HashMap<String, State> transities = new HashMap<>();
+    private String naam;
 
-    private static List<State> locaties = new ArrayList<>();
-
-    public static void setLocaties(State locatie) {
-        locaties.add(locatie);
+    public State(String naam) {
+        this.naam = naam;
     }
 
-    public static List<State> getLocaties() {
-        return locaties;
+    public HashMap<String, State> getTransities() {
+        return transities;
     }
 
-    void update(String input) { }
+    public String getNaam() {
+        return naam;
+    }
+
+    public void addTransitie(String optie, State state) {
+        this.transities.put(optie, state);
+    }
+
+    @Override
+    public String toString() {
+        String transitiesString = "";
+        for (String key : transities.keySet()) {
+            transitiesString = transitiesString + key + " -> " + transities.get(key).naam + ", ";
+        }
+        return "Naam: " + naam + " Transities: " + transitiesString;
+    }
 }
