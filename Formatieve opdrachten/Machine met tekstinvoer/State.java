@@ -1,6 +1,7 @@
 package tobias.formatieveopdracht2a;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class State {
 
@@ -13,6 +14,10 @@ public class State {
 
     public HashMap<String, State> getTransities() {
         return transities;
+    }
+
+    public Set<String> getTransitiesSet() {
+        return transities.keySet();
     }
 
     public String getNaam() {
