@@ -78,5 +78,8 @@ public class Main {
 
         State[] states = {s0, s1, s2, s3, s4, s5, s6, s7, s8, s9};
         FSM fsm = new FSM(states);
+
+        String[] inputs = {"D", "A", "C", "B", "A", "C", "C", "B", "B", "C", "B", "A", "A", "C"};
+        System.out.println(fsm.run(inputs, s0));
     }
 }
