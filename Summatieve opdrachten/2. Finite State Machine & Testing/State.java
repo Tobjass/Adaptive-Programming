@@ -30,4 +30,12 @@ public class State {
     public void addTransitie(String optie, State state) {
         this.transities.put(optie, state);
     }
+
+    @Override
+    public String toString() {
+        return "State{" +
+                "transities=" + transities +
+                ", naam='" + naam + '\'' +
+                '}';
+    }
 }
