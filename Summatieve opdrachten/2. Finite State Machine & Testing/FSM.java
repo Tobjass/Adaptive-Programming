@@ -13,6 +13,7 @@ public class FSM {
     }
 
     public List<String> run(String[] inputs, State beginstate) {
-        
+        State current = beginstate;
+        this.locaties.add(current.getNaam());
     }
 }
