@@ -6,4 +6,8 @@ public class State {
 
     private HashMap<String, tobias.formatieveopdracht2a.State> transities = new HashMap<>();
     private String naam;
+
+    public State(String naam) {
+        this.naam = naam;
+    }
 }
