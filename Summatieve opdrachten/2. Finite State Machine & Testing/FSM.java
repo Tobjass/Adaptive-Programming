@@ -11,4 +11,8 @@ public class FSM {
     public FSM(State[] states) {
         this.states = states;
     }
+
+    public List<String> run(String[] inputs, State beginstate) {
+        
+    }
 }
