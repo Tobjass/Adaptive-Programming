@@ -16,8 +16,13 @@ public class FSM {
         State current = beginstate;
         this.locaties.add(current.getNaam());
         for (String input : inputs) {
-            current = current.getTransities().get(input);
-            this.locaties.add(current.getNaam());
+            if (current.getTransitiesSet().contains(input)) {
+                current = current.getTransities().get(input);
+                this.locaties.add(current.getNaam());
+            }
+            else {
+                System.out.println("\nError: overgang '" + input + "' bestaat niet voor state " + current.getNaam() + "\n");
+            }
         }
         return this.locaties;
     }
