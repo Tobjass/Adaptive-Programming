@@ -10,4 +10,20 @@ public class State {
     public State(String naam) {
         this.naam = naam;
     }
+
+    public HashMap<String, tobias.formatieveopdracht2a.State> getTransities() {
+        return transities;
+    }
+
+    public void setTransities(HashMap<String, tobias.formatieveopdracht2a.State> transities) {
+        this.transities = transities;
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
 }
