@@ -33,9 +33,10 @@ public class State {
 
     @Override
     public String toString() {
-        return "State{" +
-                "transities=" + transities +
-                ", naam='" + naam + '\'' +
-                '}';
+        String transitiesString = "";
+        for (String key : transities.keySet()) {
+            transitiesString = transitiesString + key + " -> " + transities.get(key).naam + ", ";
+        }
+        return "State: " + naam + " Transities: " + transitiesString;
     }
 }
