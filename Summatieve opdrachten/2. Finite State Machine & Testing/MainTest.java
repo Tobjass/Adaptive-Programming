@@ -14,6 +14,8 @@ public class MainTest {
     public void setUp() {
         s0 = new State("s0");
         s1 = new State("s1");
+
+        s0.addTransitie("D", s1);
     }
 
     @Test
@@ -23,8 +25,6 @@ public class MainTest {
 
     @Test
     public void nieuweTransitie() {
-        s0.addTransitie("D", s1);
-
         assertEquals("Error bij het aanmaken van nieuwe transitie", "State: s0 Transities: D -> s1, ", s0.toString());
     }
 
@@ -32,7 +32,6 @@ public class MainTest {
     public void FSMrun() {
         State s2 = new State("s2");
 
-        s0.addTransitie("D", s1);
         s1.addTransitie("A", s2);
 
         State[] states = {s0, s1, s2};
