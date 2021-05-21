@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // 10 nieuwe states aanmaken
         State s0 = new State("s0");
         State s1 = new State("s1");
         State s2 = new State("s2");
@@ -16,7 +17,8 @@ public class Main {
         State s7 = new State("s7");
         State s8 = new State("s8");
         State s9 = new State("s9");
-
+        
+        // (Regel 22 t/m 81) nieuwe transities aanmaken, er zijn 3 states met 6 transities, 5 states met 5 transities & 2 states met 4 transities
         s0.addTransitie("A", s3);
         s0.addTransitie("B", s8);
         s0.addTransitie("C", s6);
@@ -77,7 +79,8 @@ public class Main {
         s9.addTransitie("D", s9);
         s9.addTransitie("E", s2);
         s9.addTransitie("F", s1);
-
+        
+        // Printen van de transities voor duidelijk overzicht
         System.out.println(s0);
         System.out.println(s1);
         System.out.println(s2);
@@ -88,15 +91,21 @@ public class Main {
         System.out.println(s7);
         System.out.println(s8);
         System.out.println(s9 + "\n");
-
+        
+        // Nieuwe Finite State Machine aanmaken en de 10 states meegeven
         State[] states = {s0, s1, s2, s3, s4, s5, s6, s7, s8, s9};
         FSM fsm = new FSM(states);
-
-        System.out.println("Opties: A t/m F\nVoer een letter gevolgd door een spatie in\nVoorbeeld: D A C B");
+        
+        // Uitleg over het geven van de input printen
+        System.out.println("Opties: A t/m F\nVoer een letter in gevolgd door een spatie\nVoorbeeld: D A C B");
+        // Input scannen
         Scanner scanner = new Scanner(System.in);
+        // Input splitsen op de spaties
         String[] inputs = scanner.nextLine().split(" ");
 
-//        String[] inputs = {"D", "A", "C", "B", "A", "C", "C", "B", "B", "C", "B", "A", "A", "C"};
+        // Deze input loopt van s0 naar s9; String[] inputs = {"D", "A", "C", "B", "A", "C", "C", "B", "B", "C", "B", "A", "A", "C"};
+        
+        // Bezochte locaties printen d.m.v. de run() functie van FSM
         System.out.println("\nBezochte locaties:\n" + fsm.run(inputs, s0));
     }
 }
