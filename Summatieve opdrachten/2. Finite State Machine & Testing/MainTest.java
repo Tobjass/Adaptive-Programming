@@ -9,10 +9,11 @@ import java.util.List;
 
 public class MainTest {
 
-    State s0;
+    State s0, s1;
     @Before
     public void setUp() {
         s0 = new State("s0");
+        s1 = new State("s1");
     }
 
     @Test
@@ -22,16 +23,13 @@ public class MainTest {
 
     @Test
     public void nieuweTransitie() {
-        State s3 = new State("s3");
+        s0.addTransitie("D", s1);
 
-        s0.addTransitie("A", s3);
-
-        assertEquals("Error bij het aanmaken van nieuwe transitie", "State: s0 Transities: A -> s3, ", s0.toString());
+        assertEquals("Error bij het aanmaken van nieuwe transitie", "State: s0 Transities: D -> s1, ", s0.toString());
     }
 
     @Test
     public void FSMrun() {
-        State s1 = new State("s1");
         State s2 = new State("s2");
 
         s0.addTransitie("D", s1);
