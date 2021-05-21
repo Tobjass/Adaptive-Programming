@@ -1,5 +1,7 @@
 package tobias.summatieveopdracht2;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -76,10 +78,25 @@ public class Main {
         s9.addTransitie("E", s2);
         s9.addTransitie("F", s1);
 
+        System.out.println(s0);
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        System.out.println(s5);
+        System.out.println(s6);
+        System.out.println(s7);
+        System.out.println(s8);
+        System.out.println(s9 + "\n");
+
         State[] states = {s0, s1, s2, s3, s4, s5, s6, s7, s8, s9};
         FSM fsm = new FSM(states);
 
-        String[] inputs = {"D", "A", "C", "B", "A", "C", "C", "B", "B", "C", "B", "A", "A", "C"};
-        System.out.println(fsm.run(inputs, s0));
+        System.out.println("Opties: A t/m F\nVoer een letter gevolgd door een spatie in\nVoorbeeld: D A C B");
+        Scanner scanner = new Scanner(System.in);
+        String[] inputs = scanner.nextLine().split(" ");
+
+//        String[] inputs = {"D", "A", "C", "B", "A", "C", "C", "B", "B", "C", "B", "A", "A", "C"};
+        System.out.println("\nBezochte locaties:\n" + fsm.run(inputs, s0));
     }
 }
