@@ -1,6 +1,7 @@
 package tobias.summatieveopdracht2;
 
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -8,16 +9,19 @@ import java.util.List;
 
 public class MainTest {
 
+    State s0;
+    @Before
+    public void setUp() {
+        s0 = new State("s0");
+    }
+
     @Test
     public void nieuweState() {
-        State s0 = new State("s0");
-
         assertEquals("Error bij het aanmaken van nieuwe state", "s0", s0.getNaam());
     }
 
     @Test
     public void nieuweTransitie() {
-        State s0 = new State("s0");
         State s3 = new State("s3");
 
         s0.addTransitie("A", s3);
@@ -27,7 +31,6 @@ public class MainTest {
 
     @Test
     public void FSMrun() {
-        State s0 = new State("s0");
         State s1 = new State("s1");
         State s2 = new State("s2");
 
@@ -42,7 +45,7 @@ public class MainTest {
         locaties.add("s0");
         locaties.add("s1");
         locaties.add("s2");
-        
+
         assertEquals("Error bij het runnen van FSM", locaties, fsm.run(inputs, s0));
     }
 }
