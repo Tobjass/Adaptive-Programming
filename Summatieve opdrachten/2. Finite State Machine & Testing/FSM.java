@@ -12,8 +12,8 @@ public class FSM {
         this.states = states;
     }
 
-    public List<String> run(String[] inputs, State beginstate) {
-        State current = beginstate;
+    public List<String> run(String[] inputs, State beginState) {
+        State current = beginState;
         this.locaties.add(current.getNaam());
         for (String input : inputs) {
             if (current.getTransitiesSet().contains(input)) {
