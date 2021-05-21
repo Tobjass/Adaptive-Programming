@@ -21,7 +21,7 @@ public class FSM {
                 this.locaties.add(current.getNaam());
             }
             else {
-                System.out.println("\nError: overgang '" + input + "' bestaat niet voor state " + current.getNaam() + "\n");
+                System.out.println("\nError: overgang '" + input + "' bestaat niet voor state " + current.getNaam());
             }
         }
         return this.locaties;
