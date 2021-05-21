@@ -15,21 +15,13 @@ public class State {
     public HashMap<String, State> getTransities() {
         return transities;
     }
-    
+
     public Set<String> getTransitiesSet() {
         return transities.keySet();
     }
 
-    public void setTransities(HashMap<String, State> transities) {
-        this.transities = transities;
-    }
-
     public String getNaam() {
         return naam;
-    }
-
-    public void setNaam(String naam) {
-        this.naam = naam;
     }
 
     public void addTransitie(String optie, State state) {
