@@ -16,6 +16,10 @@ public class Node implements Comparator<Node> {
 
     @Override
     public int compare(Node o1, Node o2) {
+        if (o1.afstandVanBeginpunt < o2.afstandVanBeginpunt)
+            return -1;
+        if (o1.afstandVanBeginpunt > o2.afstandVanBeginpunt)
+            return 1;
         return 0;
     }
 }
