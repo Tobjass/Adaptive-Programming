@@ -1,5 +1,7 @@
 package tobias.summatieveopdracht3;
 
+import tobias.dijkstra_priorityqueue.DPQ;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,5 +62,8 @@ public class Main {
         data.get(7).add(new Node(1, 58));
         data.get(7).add(new Node(6, 18));
 
+        for (int i = 0; i < treinstations.length; i++) {
+            
+        }
     }
 }
