@@ -7,6 +7,8 @@ public class Reis {
     private int afstand[];
     private Set<Integer> visited;
     private int punten;
+    private PriorityQueue<Node> priorityQueue;
+    private List<List<Node>> data;
 
     public Reis(int punten) {
         this.punten = punten;
