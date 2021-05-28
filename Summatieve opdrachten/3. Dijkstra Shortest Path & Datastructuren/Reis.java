@@ -40,4 +40,8 @@ public class Reis {
     public void setPunten(int punten) {
         this.punten = punten;
     }
+
+    public void dijkstraAlgoritme(List<List<Node>> data, int beginpunt) {
+
+    }
 }
