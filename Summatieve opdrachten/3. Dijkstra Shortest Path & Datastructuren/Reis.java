@@ -14,6 +14,7 @@ public class Reis {
         this.punten = punten;
         afstand = new int[punten];
         visited = new HashSet<>();
+        priorityQueue = new PriorityQueue<>(punten, new Node());
     }
 
     public int[] getAfstand() {
