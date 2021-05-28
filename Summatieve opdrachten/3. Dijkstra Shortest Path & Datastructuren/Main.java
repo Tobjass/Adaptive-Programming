@@ -66,7 +66,10 @@ public class Main {
             Reis reis = new Reis(treinstations.length);
             reis.dijkstraAlgoritme(data, i);
 
-            
+            System.out.println("\nDe korste reis van ...");
+            for (int x = 0; x < reis.getAfstand().length; x++) {
+                System.out.println(treinstations[i] + " naar " + treinstations[x] + " duurt " + reis.getAfstand()[x] + " minuten");
+            }
         }
     }
 }
