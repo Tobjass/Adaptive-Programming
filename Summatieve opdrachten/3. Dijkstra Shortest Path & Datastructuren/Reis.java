@@ -60,15 +60,17 @@ public class Reis {
 
             for (int x = 0; x < data.get(temp).size(); x++) {
                 Node stap = data.get(temp).get(x);
+                
+                if (!visited.contains(stap.node)) {
+                    edgeAfstand = stap.afstandVanBeginpunt;
+                    nieuweAfstand = afstand[temp] + edgeAfstand;
 
-                edgeAfstand = stap.afstandVanBeginpunt;
-                nieuweAfstand = afstand[temp] + edgeAfstand;
+                    if (nieuweAfstand < afstand[stap.node]) {
+                        afstand[stap.node] = nieuweAfstand;
+                    }
 
-                if (nieuweAfstand < afstand[stap.node]) {
-                    afstand[stap.node] = nieuweAfstand;
+                    priorityQueue.add(new Node(stap.node, afstand[stap.node]));
                 }
-
-                priorityQueue.add(new Node(stap.node, afstand[stap.node]));
             }
         }
     }
