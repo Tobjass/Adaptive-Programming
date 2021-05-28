@@ -42,6 +42,10 @@ public class Reis {
     }
 
     public void dijkstraAlgoritme(List<List<Node>> data, int beginpunt) {
+        this.data = data;
 
+        for (int i = 0; i < punten; i++) {
+            afstand[i] = Integer.MAX_VALUE;
+        }
     }
 }
