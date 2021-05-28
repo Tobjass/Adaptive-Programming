@@ -5,6 +5,8 @@ public class Node {
     public int node;
     public int afstandVanBeginpunt;
 
+    public Node() { }
+
     public Node(int node, int afstandVanBeginpunt) {
         this.node = node;
         this.afstandVanBeginpunt = afstandVanBeginpunt;
