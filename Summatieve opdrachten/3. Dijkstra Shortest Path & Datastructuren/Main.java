@@ -9,5 +9,10 @@ public class Main {
         String[] treinstations = {"Utrecht Centraal", "Amsterdam Centraal", "Rotterdam Centraal", "Schiphol Airport", "Den Haag Centraal", "Leiden Centraal", "Eindhoven Centraal", "’s-Hertogenbosch"};
 
         List<List<Node>> data = new ArrayList<>();
+
+        for (int i = 0; i < treinstations.length; i++) {
+            List<Node> station = new ArrayList<>();
+            data.add(station);
+        }
     }
 }
