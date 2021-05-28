@@ -52,7 +52,14 @@ public class Reis {
 
         afstand[beginpunt] = 0;
         while (visited.size() != punten) {
-            visited.add(priorityQueue.remove().node);
+            int temp = priorityQueue.remove().node;
+            visited.add(temp);
+
+            for (int x = 0; x < data.get(temp).size(); x++) {
+                
+            }
         }
     }
+
+
 }
