@@ -47,5 +47,12 @@ public class Reis {
         for (int i = 0; i < punten; i++) {
             afstand[i] = Integer.MAX_VALUE;
         }
+
+        priorityQueue.add(new Node(beginpunt, 0));
+
+        afstand[beginpunt] = 0;
+        while (visited.size() != punten) {
+            visited.add(priorityQueue.remove().node);
+        }
     }
 }
