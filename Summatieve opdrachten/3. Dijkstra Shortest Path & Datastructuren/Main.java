@@ -1,7 +1,5 @@
 package tobias.summatieveopdracht3;
 
-import tobias.dijkstra_priorityqueue.DPQ;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         String[] treinstations = {"Utrecht Centraal", "Amsterdam Centraal", "Rotterdam Centraal", "Schiphol Airport",
+                "Den Haag Centraal", "Leiden Centraal", "Eindhoven Centraal", "’s-Hertogenbosch"};
+        String[] autolocaties = {"Utrecht Centraal", "Amsterdam Centraal", "Rotterdam Centraal", "Schiphol Airport",
                 "Den Haag Centraal", "Leiden Centraal", "Eindhoven Centraal", "’s-Hertogenbosch"};
 
         List<List<Node>> data = new ArrayList<>();
