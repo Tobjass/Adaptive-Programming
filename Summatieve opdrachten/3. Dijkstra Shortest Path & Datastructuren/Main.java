@@ -63,6 +63,9 @@ public class Main {
         data.get(7).add(new Node(6, 18));
 
         for (int i = 0; i < treinstations.length; i++) {
+            Reis reis = new Reis(treinstations.length);
+            reis.dijkstraAlgoritme(data, i);
+
             
         }
     }
