@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Reis {
 
-    private float afstand[];
+    private double afstand[];
     private Set<Integer> visited;
     private int punten;
     private PriorityQueue<Node> priorityQueue;
@@ -12,7 +12,7 @@ public class Reis {
 
     public Reis(int punten) {
         this.punten = punten;
-        afstand = new int[punten];
+        afstand = new double[punten];
         visited = new HashSet<>();
         priorityQueue = new PriorityQueue<>(punten, new Node());
     }
@@ -52,8 +52,8 @@ public class Reis {
 
         afstand[beginpunt] = 0;
         while (visited.size() != punten) {
-            float edgeAfstand;
-            float nieuweAfstand;
+            double edgeAfstand;
+            double nieuweAfstand;
 
             int temp = priorityQueue.remove().node;
             visited.add(temp);
