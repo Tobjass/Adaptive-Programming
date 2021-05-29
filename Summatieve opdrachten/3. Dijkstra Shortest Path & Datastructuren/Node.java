@@ -5,11 +5,11 @@ import java.util.Comparator;
 public class Node implements Comparator<Node> {
 
     public int node;
-    public float afstandVanBeginpunt;
+    public double afstandVanBeginpunt;
 
     public Node() { }
 
-    public Node(int node, float afstandVanBeginpunt) {
+    public Node(int node, double afstandVanBeginpunt) {
         this.node = node;
         this.afstandVanBeginpunt = afstandVanBeginpunt;
     }
