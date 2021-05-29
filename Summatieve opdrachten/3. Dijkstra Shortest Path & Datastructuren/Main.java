@@ -17,7 +17,8 @@ public class Main {
         for (int i = 0; i < treinstations.length; i++) {
             List<Node> lijst = new ArrayList<>();
             dataStations.add(lijst);
-            dataAutolocaties.add(lijst);
+            List<Node> lijst2 = new ArrayList<>();
+            dataAutolocaties.add(lijst2);
         }
 
         dataStations.get(0).add(new Node(1, 27));
@@ -110,23 +111,26 @@ public class Main {
         dataAutolocaties.get(7).add(new Node(2, 78.8));
         dataAutolocaties.get(7).add(new Node(6, 36.6));
 
+        System.out.println("------------------ Treinritten ------------------");
         for (int i = 0; i < treinstations.length; i++) {
             Reis reis = new Reis(treinstations.length);
             reis.dijkstraAlgoritme(dataStations, i);
 
             System.out.println("\nDe korste reis van ...");
             for (int x = 0; x < reis.getAfstand().length; x++) {
-                System.out.println(treinstations[i] + " naar " + treinstations[x] + " duurt " + reis.getAfstand()[x] + " minuten");
+                System.out.println(treinstations[i] + " naar " + treinstations[x] + " duurt " + Math.round(reis.getAfstand()[x]) + " minuten");
             }
         }
 
+        System.out.println("\n\n------------------ Autoritten ------------------");
         for (int i = 0; i < autolocaties.length; i++) {
             Reis reis = new Reis(autolocaties.length);
             reis.dijkstraAlgoritme(dataAutolocaties, i);
 
             System.out.println("\nDe korste reis van ...");
             for (int x = 0; x < reis.getAfstand().length; x++) {
-                System.out.println(autolocaties[i] + " naar " + autolocaties[x] + " is " + reis.getAfstand()[x] + " km");
+                double aantalKm = Math.round(reis.getAfstand()[x] * 10);
+                System.out.println(autolocaties[i] + " naar " + autolocaties[x] + " is " + aantalKm / 10 + " km");
             }
         }
     }
