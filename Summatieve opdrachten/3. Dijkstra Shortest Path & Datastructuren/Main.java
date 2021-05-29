@@ -10,60 +10,66 @@ public class Main {
                 "Den Haag Centraal", "Leiden Centraal", "Eindhoven Centraal", "’s-Hertogenbosch"};
         String[] autolocaties = {"Utrecht", "Amsterdam", "Rotterdam", "Schiphol",
                 "Den Haag", "Leiden", "Eindhoven", "’s-Hertogenbosch"};
+        String[] luchthavens = {"Hartsfield-Jackson Atlanta International", "Beijing Capital International",
+                "Dubai International Airport", "Los Angeles International Airport", "Tokyo International Airport",
+                "O’Hare International Airport", "London Heathrow", "Amsterdam Schiphol"};
 
-        List<List<Node>> dataStations = new ArrayList<>();
+        List<List<Node>> dataTreinstations = new ArrayList<>();
         List<List<Node>> dataAutolocaties = new ArrayList<>();
+        List<List<Node>> dataLuchthavens = new ArrayList<>();
 
         for (int i = 0; i < treinstations.length; i++) {
-            List<Node> lijst = new ArrayList<>();
-            dataStations.add(lijst);
-            List<Node> lijst2 = new ArrayList<>();
-            dataAutolocaties.add(lijst2);
+            List<Node> treinstation = new ArrayList<>();
+            dataTreinstations.add(treinstation);
+            List<Node> autolocatie = new ArrayList<>();
+            dataAutolocaties.add(autolocatie);
+            List<Node> luchthaven = new ArrayList<>();
+            dataLuchthavens.add(luchthaven);
         }
 
-        dataStations.get(0).add(new Node(1, 27));
-        dataStations.get(0).add(new Node(2, 37));
-        dataStations.get(0).add(new Node(3, 29));
-        dataStations.get(0).add(new Node(4, 37));
-        dataStations.get(0).add(new Node(5, 42));
-        dataStations.get(0).add(new Node(6, 49));
-        dataStations.get(0).add(new Node(7, 27));
+        dataTreinstations.get(0).add(new Node(1, 27));
+        dataTreinstations.get(0).add(new Node(2, 37));
+        dataTreinstations.get(0).add(new Node(3, 29));
+        dataTreinstations.get(0).add(new Node(4, 37));
+        dataTreinstations.get(0).add(new Node(5, 42));
+        dataTreinstations.get(0).add(new Node(6, 49));
+        dataTreinstations.get(0).add(new Node(7, 27));
 
-        dataStations.get(1).add(new Node(0, 27));
-        dataStations.get(1).add(new Node(2, 41));
-        dataStations.get(1).add(new Node(3, 13));
-        dataStations.get(1).add(new Node(5, 36));
-        dataStations.get(0).add(new Node(7, 58));
+        dataTreinstations.get(1).add(new Node(0, 27));
+        dataTreinstations.get(1).add(new Node(2, 41));
+        dataTreinstations.get(1).add(new Node(3, 13));
+        dataTreinstations.get(1).add(new Node(5, 36));
+        dataTreinstations.get(0).add(new Node(7, 58));
 
-        dataStations.get(2).add(new Node(0, 37));
-        dataStations.get(2).add(new Node(1, 41));
-        dataStations.get(2).add(new Node(3, 25));
-        dataStations.get(2).add(new Node(4, 23));
-        dataStations.get(2).add(new Node(5, 33));
+        dataTreinstations.get(2).add(new Node(0, 37));
+        dataTreinstations.get(2).add(new Node(1, 41));
+        dataTreinstations.get(2).add(new Node(3, 25));
+        dataTreinstations.get(2).add(new Node(4, 23));
+        dataTreinstations.get(2).add(new Node(5, 33));
 
-        dataStations.get(3).add(new Node(0, 29));
-        dataStations.get(3).add(new Node(1, 13));
-        dataStations.get(3).add(new Node(2, 25));
-        dataStations.get(3).add(new Node(4, 29));
-        dataStations.get(3).add(new Node(5, 16));
+        dataTreinstations.get(3).add(new Node(0, 29));
+        dataTreinstations.get(3).add(new Node(1, 13));
+        dataTreinstations.get(3).add(new Node(2, 25));
+        dataTreinstations.get(3).add(new Node(4, 29));
+        dataTreinstations.get(3).add(new Node(5, 16));
 
-        dataStations.get(4).add(new Node(0, 37));
-        dataStations.get(4).add(new Node(2, 23));
-        dataStations.get(4).add(new Node(3, 29));
-        dataStations.get(4).add(new Node(5, 12));
+        dataTreinstations.get(4).add(new Node(0, 37));
+        dataTreinstations.get(4).add(new Node(2, 23));
+        dataTreinstations.get(4).add(new Node(3, 29));
+        dataTreinstations.get(4).add(new Node(5, 12));
 
-        dataStations.get(5).add(new Node(0, 42));
-        dataStations.get(5).add(new Node(1, 36));
-        dataStations.get(5).add(new Node(2, 33));
-        dataStations.get(5).add(new Node(3, 16));
-        dataStations.get(5).add(new Node(4, 12));
+        dataTreinstations.get(5).add(new Node(0, 42));
+        dataTreinstations.get(5).add(new Node(1, 36));
+        dataTreinstations.get(5).add(new Node(2, 33));
+        dataTreinstations.get(5).add(new Node(3, 16));
+        dataTreinstations.get(5).add(new Node(4, 12));
 
-        dataStations.get(6).add(new Node(0, 49));
-        dataStations.get(6).add(new Node(7, 18));
+        dataTreinstations.get(6).add(new Node(0, 49));
+        dataTreinstations.get(6).add(new Node(7, 18));
 
-        dataStations.get(7).add(new Node(0, 27));
-        dataStations.get(7).add(new Node(1, 58));
-        dataStations.get(7).add(new Node(6, 18));
+        dataTreinstations.get(7).add(new Node(0, 27));
+        dataTreinstations.get(7).add(new Node(1, 58));
+        dataTreinstations.get(7).add(new Node(6, 18));
 
         dataAutolocaties.get(0).add(new Node(1, 42.7));
         dataAutolocaties.get(0).add(new Node(2, 61.2));
@@ -114,7 +120,7 @@ public class Main {
         System.out.println("------------------ Treinritten ------------------");
         for (int i = 0; i < treinstations.length; i++) {
             Reis reis = new Reis(treinstations.length);
-            reis.dijkstraAlgoritme(dataStations, i);
+            reis.dijkstraAlgoritme(dataTreinstations, i);
 
             System.out.println("\nDe korste reis van ...");
             for (int x = 0; x < reis.getAfstand().length; x++) {
