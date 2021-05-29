@@ -117,6 +117,58 @@ public class Main {
         dataAutolocaties.get(7).add(new Node(2, 78.8));
         dataAutolocaties.get(7).add(new Node(6, 36.6));
 
+        dataLuchthavens.get(0).add(new Node(3, 421.99));
+        dataLuchthavens.get(0).add(new Node(5, 306.99));
+        dataLuchthavens.get(0).add(new Node(6, 1302.99));
+        dataLuchthavens.get(0).add(new Node(7, 1332.99));
+
+        dataLuchthavens.get(1).add(new Node(2, 1500.04));
+        dataLuchthavens.get(1).add(new Node(3, 730.99));
+        dataLuchthavens.get(1).add(new Node(4, 616.99));
+        dataLuchthavens.get(1).add(new Node(5, 1172.99));
+
+        dataLuchthavens.get(2).add(new Node(1, 1500.04));
+        dataLuchthavens.get(2).add(new Node(3, 620.99));
+        dataLuchthavens.get(2).add(new Node(5, 465.99));
+        dataLuchthavens.get(2).add(new Node(6, 284.99));
+        dataLuchthavens.get(2).add(new Node(7, 569.99));
+
+        dataLuchthavens.get(3).add(new Node(0, 421.99));
+        dataLuchthavens.get(3).add(new Node(1, 730.99));
+        dataLuchthavens.get(3).add(new Node(2, 620.99));
+        dataLuchthavens.get(3).add(new Node(4, 1177.99));
+        dataLuchthavens.get(3).add(new Node(5, 296.99));
+        dataLuchthavens.get(3).add(new Node(6, 979.99));
+        dataLuchthavens.get(3).add(new Node(7, 888.99));
+
+        dataLuchthavens.get(4).add(new Node(1, 616.99));
+        dataLuchthavens.get(4).add(new Node(3, 1177.99));
+        dataLuchthavens.get(4).add(new Node(5, 2498.99));
+        dataLuchthavens.get(4).add(new Node(6, 1486.99));
+        dataLuchthavens.get(4).add(new Node(7, 1390.74));
+
+        dataLuchthavens.get(5).add(new Node(0, 306.99));
+        dataLuchthavens.get(5).add(new Node(1, 1172.99));
+        dataLuchthavens.get(5).add(new Node(2, 465.99));
+        dataLuchthavens.get(5).add(new Node(3, 296.99));
+        dataLuchthavens.get(5).add(new Node(4, 2498.99));
+        dataLuchthavens.get(5).add(new Node(6, 1336.99));
+        dataLuchthavens.get(5).add(new Node(7, 721.99));
+
+        dataLuchthavens.get(6).add(new Node(0, 1302.99));
+        dataLuchthavens.get(6).add(new Node(2, 284.99));
+        dataLuchthavens.get(6).add(new Node(3, 979.99));
+        dataLuchthavens.get(6).add(new Node(4, 1486.99));
+        dataLuchthavens.get(6).add(new Node(5, 1336.99));
+        dataLuchthavens.get(6).add(new Node(7, 75));
+
+        dataLuchthavens.get(7).add(new Node(0, 1332.99));
+        dataLuchthavens.get(7).add(new Node(2, 569.99));
+        dataLuchthavens.get(7).add(new Node(3, 888.99));
+        dataLuchthavens.get(7).add(new Node(4, 1390.74));
+        dataLuchthavens.get(7).add(new Node(5, 721.99));
+        dataLuchthavens.get(7).add(new Node(6, 75));
+
         System.out.println("------------------ Treinritten ------------------");
         for (int i = 0; i < treinstations.length; i++) {
             Reis reis = new Reis(treinstations.length);
@@ -137,6 +189,17 @@ public class Main {
             for (int x = 0; x < reis.getAfstand().length; x++) {
                 double aantalKm = Math.round(reis.getAfstand()[x] * 10);
                 System.out.println(autolocaties[i] + " naar " + autolocaties[x] + " is " + aantalKm / 10 + " km");
+            }
+        }
+
+        System.out.println("\n\n------------------ Vluchten ------------------");
+        for (int i = 0; i < luchthavens.length; i++) {
+            Reis reis = new Reis(luchthavens.length);
+            reis.dijkstraAlgoritme(dataLuchthavens, i);
+
+            System.out.println("\nDe goedkoopste reis van ...");
+            for (int x = 0; x < reis.getAfstand().length; x++) {
+                System.out.println(luchthavens[i] + " naar " + luchthavens[x] + " kost €" + reis.getAfstand()[x]);
             }
         }
     }
