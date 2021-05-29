@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Reis {
 
-    private int afstand[];
+    private float afstand[];
     private Set<Integer> visited;
     private int punten;
     private PriorityQueue<Node> priorityQueue;
@@ -52,15 +52,15 @@ public class Reis {
 
         afstand[beginpunt] = 0;
         while (visited.size() != punten) {
-            int edgeAfstand;
-            int nieuweAfstand;
+            float edgeAfstand;
+            float nieuweAfstand;
 
             int temp = priorityQueue.remove().node;
             visited.add(temp);
 
             for (int x = 0; x < data.get(temp).size(); x++) {
                 Node stap = data.get(temp).get(x);
-                
+
                 if (!visited.contains(stap.node)) {
                     edgeAfstand = stap.afstandVanBeginpunt;
                     nieuweAfstand = afstand[temp] + edgeAfstand;
