@@ -17,11 +17,11 @@ public class Reis {
         priorityQueue = new PriorityQueue<>(punten, new Node());
     }
 
-    public int[] getAfstand() {
+    public double[] getAfstand() {
         return afstand;
     }
 
-    public void setAfstand(int[] afstand) {
+    public void setAfstand(double[] afstand) {
         this.afstand = afstand;
     }
 
@@ -71,6 +71,18 @@ public class Reis {
 
                     priorityQueue.add(new Node(stap.node, afstand[stap.node]));
                 }
+            }
+        }
+    }
+
+    public void printData(List<List<Node>> data, String[] lijst, String reisSoort, String woord, String eenheid) {
+        for (int i = 0; i < lijst.length; i++) {
+            Reis reis = new Reis(lijst.length);
+            reis.dijkstraAlgoritme(data, i);
+
+            System.out.println("\nDe " + reisSoort + " reis van ...");
+            for (int x = 0; x < reis.getAfstand().length; x++) {
+                System.out.println(lijst[i] + " naar " + lijst[x] + woord + Math.round(reis.getAfstand()[x]) + eenheid);
             }
         }
     }
