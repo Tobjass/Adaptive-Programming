@@ -169,38 +169,14 @@ public class Main {
         dataLuchthavens.get(7).add(new Node(5, 721.99));
         dataLuchthavens.get(7).add(new Node(6, 75));
 
+        Reis print = new Reis(8);
         System.out.println("------------------ Treinritten ------------------");
-        for (int i = 0; i < treinstations.length; i++) {
-            Reis reis = new Reis(treinstations.length);
-            reis.dijkstraAlgoritme(dataTreinstations, i);
-
-            System.out.println("\nDe korste reis van ...");
-            for (int x = 0; x < reis.getAfstand().length; x++) {
-                System.out.println(treinstations[i] + " naar " + treinstations[x] + " duurt " + Math.round(reis.getAfstand()[x]) + " minuten");
-            }
-        }
+        print.printData(dataTreinstations, treinstations, "kortse", " duurt ", " minuten");
 
         System.out.println("\n\n------------------ Autoritten ------------------");
-        for (int i = 0; i < autolocaties.length; i++) {
-            Reis reis = new Reis(autolocaties.length);
-            reis.dijkstraAlgoritme(dataAutolocaties, i);
-
-            System.out.println("\nDe korste reis van ...");
-            for (int x = 0; x < reis.getAfstand().length; x++) {
-                double aantalKm = Math.round(reis.getAfstand()[x] * 10);
-                System.out.println(autolocaties[i] + " naar " + autolocaties[x] + " is " + aantalKm / 10 + " km");
-            }
-        }
+        print.printData(dataAutolocaties, autolocaties, "korste", " is ", " km");
 
         System.out.println("\n\n------------------ Vluchten ------------------");
-        for (int i = 0; i < luchthavens.length; i++) {
-            Reis reis = new Reis(luchthavens.length);
-            reis.dijkstraAlgoritme(dataLuchthavens, i);
-
-            System.out.println("\nDe goedkoopste reis van ...");
-            for (int x = 0; x < reis.getAfstand().length; x++) {
-                System.out.println(luchthavens[i] + " naar " + luchthavens[x] + " kost €" + reis.getAfstand()[x]);
-            }
-        }
+        print.printData(dataLuchthavens, luchthavens, "goedkoopste", " kost €", "");
     }
 }
