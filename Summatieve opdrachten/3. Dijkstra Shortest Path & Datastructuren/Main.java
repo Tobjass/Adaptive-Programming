@@ -171,12 +171,12 @@ public class Main {
 
         Reis print = new Reis(8);
         System.out.println("------------------ Treinritten ------------------");
-        print.printData(dataTreinstations, treinstations, "kortse", " duurt ", " minuten");
+        print.printData(dataTreinstations, treinstations, 1, "kortse", " duurt ", " minuten");
 
         System.out.println("\n\n------------------ Autoritten ------------------");
-        print.printData(dataAutolocaties, autolocaties, "korste", " is ", " km");
+        print.printData(dataAutolocaties, autolocaties, 10, "korste", " is ", " km");
 
         System.out.println("\n\n------------------ Vluchten ------------------");
-        print.printData(dataLuchthavens, luchthavens, "goedkoopste", " kost €", "");
+        print.printData(dataLuchthavens, luchthavens, 100, "goedkoopste", " kost €", "");
     }
 }
