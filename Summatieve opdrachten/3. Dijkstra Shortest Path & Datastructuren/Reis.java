@@ -75,14 +75,15 @@ public class Reis {
         }
     }
 
-    public void printData(List<List<Node>> data, String[] lijst, String reisSoort, String woord, String eenheid) {
+    public void printData(List<List<Node>> data, String[] lijst, int aantalAchterKomma, String reisSoort, String woord, String eenheid) {
         for (int i = 0; i < lijst.length; i++) {
             Reis reis = new Reis(lijst.length);
             reis.dijkstraAlgoritme(data, i);
 
             System.out.println("\nDe " + reisSoort + " reis van ...");
             for (int x = 0; x < reis.getAfstand().length; x++) {
-                System.out.println(lijst[i] + " naar " + lijst[x] + woord + Math.round(reis.getAfstand()[x]) + eenheid);
+                double aantalKm = Math.round(reis.getAfstand()[x] * aantalAchterKomma);
+                System.out.println(lijst[i] + " naar " + lijst[x] + woord + aantalKm / aantalAchterKomma + eenheid);
             }
         }
     }
