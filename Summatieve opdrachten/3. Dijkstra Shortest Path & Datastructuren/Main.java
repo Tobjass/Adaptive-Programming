@@ -6,6 +6,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        // Lijsten met treinstations, autolocaties en luchthavens
         String[] treinstations = {"Utrecht Centraal", "Amsterdam Centraal", "Rotterdam Centraal", "Schiphol Airport",
                 "Den Haag Centraal", "Leiden Centraal", "Eindhoven Centraal", "’s-Hertogenbosch"};
         String[] autolocaties = {"Utrecht", "Amsterdam", "Rotterdam", "Schiphol",
@@ -14,10 +15,12 @@ public class Main {
                 "Dubai International Airport", "Los Angeles International Airport", "Tokyo International Airport",
                 "O’Hare International Airport", "London Heathrow", "Amsterdam Schiphol"};
 
+        // Datalijsten aanmaken
         List<List<Node>> dataTreinstations = new ArrayList<>();
         List<List<Node>> dataAutolocaties = new ArrayList<>();
         List<List<Node>> dataLuchthavens = new ArrayList<>();
 
+        // Lijst voor elke node toevoegen
         for (int i = 0; i < treinstations.length; i++) {
             List<Node> treinstation = new ArrayList<>();
             dataTreinstations.add(treinstation);
@@ -27,6 +30,7 @@ public class Main {
             dataLuchthavens.add(luchthaven);
         }
 
+        // Data toevoegen
         dataTreinstations.get(0).add(new Node(1, 27));
         dataTreinstations.get(0).add(new Node(2, 37));
         dataTreinstations.get(0).add(new Node(3, 29));
@@ -169,14 +173,18 @@ public class Main {
         dataLuchthavens.get(7).add(new Node(5, 721.99));
         dataLuchthavens.get(7).add(new Node(6, 75));
 
+        // Nieuwe reis aanmaken om printData() aan te kunnen roepen
         Reis print = new Reis(8);
         System.out.println("------------------ Treinritten ------------------");
+        // printData() runnen
         print.printData(dataTreinstations, treinstations, 1, "kortse", " duurt ", " minuten");
 
         System.out.println("\n\n------------------ Autoritten ------------------");
+        // printData() runnen
         print.printData(dataAutolocaties, autolocaties, 10, "korste", " is ", " km");
 
         System.out.println("\n\n------------------ Vluchten ------------------");
+        // printData() runnen
         print.printData(dataLuchthavens, luchthavens, 100, "goedkoopste", " kost €", "");
     }
 }
