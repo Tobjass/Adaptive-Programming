@@ -10,6 +10,7 @@ public class Reis {
     private PriorityQueue<Node> priorityQueue;
     private List<List<Node>> data;
 
+    // Constructor
     public Reis(int punten) {
         this.punten = punten;
         afstand = new double[punten];
@@ -21,69 +22,62 @@ public class Reis {
         return afstand;
     }
 
-    public void setAfstand(double[] afstand) {
-        this.afstand = afstand;
-    }
-
-    public Set<Integer> getVisited() {
-        return visited;
-    }
-
-    public void setVisited(Set<Integer> visited) {
-        this.visited = visited;
-    }
-
-    public int getPunten() {
-        return punten;
-    }
-
-    public void setPunten(int punten) {
-        this.punten = punten;
-    }
-
+    // Functie om de korste/goedkoopste reis te berekenen
     public void dijkstraAlgoritme(List<List<Node>> data, int beginpunt) {
         this.data = data;
 
+        // Grootste integer in java toewijzen aan afstanden
         for (int i = 0; i < punten; i++) {
             afstand[i] = Integer.MAX_VALUE;
         }
 
+        // Beginpunt aan priorityQueue toevoegen
         priorityQueue.add(new Node(beginpunt, 0));
 
+        // Afstand naar het beginpunt is altijd 0
         afstand[beginpunt] = 0;
         while (visited.size() != punten) {
             double edgeAfstand;
             double nieuweAfstand;
 
+            // Minimale afstand uit de priority queue halen
             int temp = priorityQueue.remove().node;
             visited.add(temp);
 
+            // Berekenen of er een kortere reis mogelijk is
             for (int x = 0; x < data.get(temp).size(); x++) {
                 Node stap = data.get(temp).get(x);
 
+                // Als de huidige node nog niet gecontroleerd is
                 if (!visited.contains(stap.node)) {
                     edgeAfstand = stap.afstandVanBeginpunt;
                     nieuweAfstand = afstand[temp] + edgeAfstand;
 
+                    // Als de nieuwe afstand korter is dan de huidige afstand
                     if (nieuweAfstand < afstand[stap.node]) {
                         afstand[stap.node] = nieuweAfstand;
                     }
 
+                    // Huidige node aan de priorityQueue toevoegen
                     priorityQueue.add(new Node(stap.node, afstand[stap.node]));
                 }
             }
         }
     }
 
+    // Printen van alle data
     public void printData(List<List<Node>> data, String[] lijst, int aantalAchterKomma, String reisSoort, String woord, String eenheid) {
         for (int i = 0; i < lijst.length; i++) {
+            // Reis aanmaken en dijkstraAlgoritme() runnen
             Reis reis = new Reis(lijst.length);
             reis.dijkstraAlgoritme(data, i);
 
+            // Prints uitvoeren
             System.out.println("\nDe " + reisSoort + " reis van ...");
             for (int x = 0; x < reis.getAfstand().length; x++) {
-                double aantalKm = Math.round(reis.getAfstand()[x] * aantalAchterKomma);
-                System.out.println(lijst[i] + " naar " + lijst[x] + woord + aantalKm / aantalAchterKomma + eenheid);
+                // Afstand afronden naar een bepaald aantal cijfers achter de komma
+                double afstand = Math.round(reis.getAfstand()[x] * aantalAchterKomma);
+                System.out.println(lijst[i] + " naar " + lijst[x] + woord + afstand / aantalAchterKomma + eenheid);
             }
         }
     }
